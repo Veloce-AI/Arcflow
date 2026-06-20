@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcflow — Open Source Architecture Intelligence</title>
+    <meta name="description" content="Visualize any GitHub repository's architecture in seconds. See dependencies, blast radius, code ownership, security issues, and design patterns. No installation required.">
+    <meta name="keywords" content="code visualization, architecture, github, dependency graph, blast radius, code analysis, open source">
+    <meta name="author" content="Arcflow">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Arcflow — Visualize Your Codebase Architecture">
+    <meta property="og:description" content="Turn any GitHub repo into an interactive architecture map in seconds. Zero setup, privacy-first, runs in your browser.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arcflow — Visualize Your Codebase Architecture">
+    <meta name="twitter:description" content="Turn any GitHub repo into an interactive architecture map in seconds. Zero setup, privacy-first.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><line x1='6' y1='25' x2='16' y2='7' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/><line x1='16' y1='7' x2='26' y2='25' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/><line x1='6' y1='25' x2='26' y2='25' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/><circle cx='6' cy='25' r='3.5' fill='%236366f1'/><circle cx='16' cy='7' r='3.5' fill='%23a78bfa'/><circle cx='26' cy='25' r='3.5' fill='%236366f1'/></svg>">
+
+    <!-- Fonts (offline) -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Vendor Dependencies (offline) -->
+    <script src="vendor/react.production.min.js"></script>
+    <script src="vendor/react-dom.production.min.js"></script>
+    <script src="vendor/d3.min.js"></script>
+    <script src="vendor/d3-sankey.min.js"></script>
+    <script src="vendor/acorn.min.js"></script>
+    <script src="vendor/jsrsasign-all-min.js"></script>
+    <script src="vendor/jszip.min.js"></script>
+    <script src="vendor/jspdf.umd.min.js"></script>
+    <script src="vendor/mermaid.min.js"></script>
+    <script src="vendor/tree-sitter.js"></script>
+    <script src="vendor/3d-force-graph.min.js"></script>
+
+    <!-- App Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/graph.css">
+</head>
+<body>
+<div id="root"></div>
+
+<!-- App Scripts (load order: constants → github → parser → graph-builder → health → architecture → shared → pr-risk → export → renderers → modals → App) -->
+<script src="js/constants.js"></script>
+<script src="js/github.js"></script>
+<script src="js/analysis/parser-core.js"></script>
+<script src="js/analysis/parser-patterns.js"></script>
+<script src="js/analysis/parser-suggestions.js"></script>
+<script src="js/analysis/parser-security.js"></script>
+<script src="js/analysis/parser-extract.js"></script>
+<script src="js/analysis/parser-languages.js"></script>
+<script src="js/analysis/parser-routes.js"></script>
+<script src="js/analysis/parser-components.js"></script>
+<script src="js/analysis/parser-callgraph.js"></script>
+<script src="js/analysis/parser-findcalls.js"></script>
+<script src="js/analysis/community-detection.js"></script>
+<script src="js/analysis/graph-builder.js"></script>
+<script src="js/analysis/health.js"></script>
+<script src="js/analysis/architecture-detect.js"></script>
+<script src="js/analysis/architecture-classify.js"></script>
+<script src="js/analysis/architecture-extract.js"></script>
+<script src="js/analysis/architecture-builder.js"></script>
+<script src="js/analysis/data-loader.js"></script>
+<script src="js/analysis/pr-risk.js"></script>
+<script src="js/analysis/osv-scan.js"></script>
+<script src="js/components/shared.js"></script>
+<script src="js/components/export.js"></script>
+<script src="js/components/graph-controls.js"></script>
+<script src="js/components/architecture-controls.js"></script>
+<script src="js/components/topbar.js"></script>
+<script src="js/components/sidebar.js"></script>
+<script src="js/components/canvas.js"></script>
+<script src="js/components/right-panel.js"></script>
+<script src="js/components/overlays.js"></script>
+<script src="js/renderers/renderer-d3.js"></script>
+<script src="js/renderers/renderer-3d.js"></script>
+<script src="js/renderers/renderer-sankey.js"></script>
+<script src="js/renderers/renderer-treemap.js"></script>
+<script src="js/renderers/renderer-matrix.js"></script>
+<script src="js/renderers/renderer-dendro.js"></script>
+<script src="js/renderers/renderer-disjoint.js"></script>
+<script src="js/renderers/renderer-bundle.js"></script>
+<script src="js/renderers/renderer-chord.js"></script>
+<script src="js/components/vapt.js"></script>
+<script src="js/components/routes-modal.js"></script>
+<script src="js/components/component-tree-modal.js"></script>
+<script src="js/components/modals.js"></script>
+<script src="js/App.js"></script>
+</body>
+</html>

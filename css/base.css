@@ -1,0 +1,62 @@
+/* base.css — CSS custom properties, dark/light theme, reset, animations, badges, toasts */
+
+:root{--bg0:#0a0a0c;--bg1:#0f0f12;--bg2:#161619;--bg3:#1c1c21;--bg4:#252529;--hover:#2a2a30;--border:#2d2d35;--border2:#222228;--t0:#f0f0f2;--t1:#c8c8cd;--t2:#8b8b95;--t3:#5c5c66;--acc:#6366f1;--acc2:#4f46e5;--accbg:rgba(99,102,241,0.1);--glass-bg:rgba(15,15,18,0.82);--blue:#4d9fff;--purple:#a78bfa;--orange:#ff9f43;--red:#ff5f5f;--cyan:#22d3ee;--pink:#ec4899;--green:#22c55e}
+.light{--bg0:#fff;--bg1:#f8f9fa;--bg2:#f1f3f4;--bg3:#e8eaed;--bg4:#dadce0;--hover:#e2e4e8;--border:#dadce0;--border2:#e8eaed;--t0:#1a1a1a;--t1:#3c3c3c;--t2:#6c6c6c;--t3:#9c9c9c;--acc:#4f46e5;--acc2:#3730a3;--accbg:rgba(79,70,229,0.08);--glass-bg:rgba(248,249,250,0.82)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg0);color:var(--t0);height:100vh;height:100dvh;min-height:100vh;min-height:100dvh;overflow:hidden}
+.icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;line-height:0;color:currentColor}
+.icon svg{display:block;width:100%;height:100%}
+.icon-s{width:12px;height:12px}
+.icon-m{width:14px;height:14px}
+.icon-l{width:16px;height:16px}
+.icon-xl{width:20px;height:20px}
+.icon-xxl{width:48px;height:48px}
+.status-dot{display:inline-block;width:8px;height:8px;border-radius:999px;flex-shrink:0}
+.badge{font-size:9px;font-weight:600;padding:2px 6px;border-radius:6px}
+.badge-default{background:var(--bg3);color:var(--t2)}
+.badge-success{background:rgba(34,197,94,0.2);color:var(--green)}
+.badge-warning{background:rgba(255,159,67,0.2);color:var(--orange)}
+.badge-danger{background:rgba(255,95,95,0.2);color:var(--red)}
+.badge-info{background:rgba(77,159,255,0.2);color:var(--blue)}
+.progress-bar{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;border-radius:3px}
+.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--acc);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:12px;color:var(--t2)}
+.loading-progress{font-size:11px;color:var(--acc);margin-top:6px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:12px 24px;border-radius:8px;font-size:12px;z-index:1001;animation:slideUp 0.3s ease}
+.toast.success{background:var(--green);color:white}
+.toast.error{background:var(--red);color:white}
+.toast.warning{background:var(--orange);color:var(--bg0)}
+@keyframes slideUp{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px}
+.empty-icon{margin-bottom:16px;opacity:0.3;color:var(--t2)}
+.empty-illustration{display:block;width:130px;height:104px;margin:0 auto 16px;filter:drop-shadow(0 4px 20px rgba(99,102,241,0.3))}
+.empty-title{font-size:16px;font-weight:600;color:var(--t1);margin-bottom:8px}
+.empty-desc{font-size:12px;color:var(--t3);max-width:300px}
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
+.tooltip{position:fixed;background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;pointer-events:none;z-index:1000;max-width:220px}
+.tooltip-title{font-size:11px;font-weight:600;color:var(--acc)}
+.tooltip-content{font-size:10px;color:var(--t2);margin-top:4px;white-space:pre-line}
+.syn-kw{color:#c678dd}
+.syn-str{color:#98c379}
+.syn-num{color:#d19a66}
+.syn-com{color:#5c6370;font-style:italic}
+.syn-fn{color:#61afef}
+.syn-type{color:#e5c07b}
+.syn-op{color:#56b6c2}
+.syn-var{color:#e06c75}
+.syn-tag{color:#e06c75}
+.syn-attr{color:#d19a66}
+.syn-punct{color:#abb2bf}
+.light .syn-kw{color:#a626a4}
+.light .syn-str{color:#50a14f}
+.light .syn-num{color:#986801}
+.light .syn-com{color:#a0a1a7}
+.light .syn-fn{color:#4078f2}
+.light .syn-type{color:#c18401}
+.light .syn-op{color:#0184bc}
+.light .syn-var{color:#e45649}
+.light .syn-tag{color:#e45649}
+.light .syn-attr{color:#986801}
+.light .syn-punct{color:#383a42}
