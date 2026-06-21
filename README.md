@@ -12,7 +12,13 @@
 
 <br>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-6366f1?style=flat-square)](LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/Veloce-AI/Arcflow?style=flat-square&color=6366f1)](https://github.com/Veloce-AI/Arcflow/stargazers) [![Open Issues](https://img.shields.io/github/issues/Veloce-AI/Arcflow?style=flat-square&color=a78bfa)](https://github.com/Veloce-AI/Arcflow/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-a78bfa?style=flat-square)](https://github.com/Veloce-AI/Arcflow/pulls) [![Works Offline](https://img.shields.io/badge/works-offline-6366f1?style=flat-square)](#whats-bundled-offline) [![Zero Install](https://img.shields.io/badge/zero-install-a78bfa?style=flat-square)](#quick-setup--zero-install) [![VS Code](https://img.shields.io/badge/VS%20Code-Extension-6366f1?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow)![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat-square&logo=react&logoColor=black) ![D3.js](https://img.shields.io/badge/D3.js-7.8-F9A03C?style=flat-square&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES5-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-offline-E34F26?style=flat-square&logo=html5&logoColor=white) ![WebGL](https://img.shields.io/badge/WebGL-3D_graphs-990000?style=flat-square) ![Mermaid](https://img.shields.io/badge/Mermaid-diagrams-FF3670?style=flat-square) ![OWASP](https://img.shields.io/badge/OWASP-Top_10-000000?style=flat-square) ![CycloneDX](https://img.shields.io/badge/CycloneDX-SBOM-00AEEF?style=flat-square) ![SARIF](https://img.shields.io/badge/SARIF-2.1.0-0078D4?style=flat-square&logo=github&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-6366f1?style=flat-square)](LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/Veloce-AI/Arcflow?style=flat-square&color=6366f1)](https://github.com/Veloce-AI/Arcflow/stargazers) [![Open Issues](https://img.shields.io/github/issues/Veloce-AI/Arcflow?style=flat-square&color=a78bfa)](https://github.com/Veloce-AI/Arcflow/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-a78bfa?style=flat-square)](https://github.com/Veloce-AI/Arcflow/pulls) [![Works Offline](https://img.shields.io/badge/works-offline-6366f1?style=flat-square)](#whats-bundled-offline) [![Zero Install](https://img.shields.io/badge/zero-install-a78bfa?style=flat-square)](#quick-setup--zero-install)
+
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/Veloce-AI.arcflow?style=flat-square&logo=visualstudiocode&label=VS%20Code%20Marketplace&color=6366f1)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow) [![Installs](https://img.shields.io/visual-studio-marketplace/i/Veloce-AI.arcflow?style=flat-square&color=a78bfa&label=installs)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow) [![Rating](https://img.shields.io/visual-studio-marketplace/r/Veloce-AI.arcflow?style=flat-square&color=6366f1)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow)
+
+<br>
+
+![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat-square&logo=react&logoColor=black) ![D3.js](https://img.shields.io/badge/D3.js-7.8-F9A03C?style=flat-square&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES5-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-offline-E34F26?style=flat-square&logo=html5&logoColor=white) ![WebGL](https://img.shields.io/badge/WebGL-3D_graphs-990000?style=flat-square) ![Mermaid](https://img.shields.io/badge/Mermaid-diagrams-FF3670?style=flat-square) ![OWASP](https://img.shields.io/badge/OWASP-Top_10-000000?style=flat-square) ![CycloneDX](https://img.shields.io/badge/CycloneDX-SBOM-00AEEF?style=flat-square) ![SARIF](https://img.shields.io/badge/SARIF-2.1.0-0078D4?style=flat-square&logo=github&logoColor=white)
 
 <br>
 
@@ -44,13 +50,20 @@
 
 ## How to Open
 
-**Option 1 — VS Code Live Server (recommended)**
+**Option 1 — VS Code Extension (easiest)**
+Install directly from the VS Code Marketplace:
+
+[![Install for VS Code](https://img.shields.io/badge/Install%20for%20VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow)
+
+Or search **"Arcflow"** in VS Code Extensions panel (`Ctrl+Shift+X`). Click the Arcflow icon in the Activity Bar to launch.
+
+**Option 2 — VS Code Live Server**
 Right-click `index.html` → *Open with Live Server*
 
-**Option 2 — start.bat**
+**Option 3 — start.bat**
 Double-click `start.bat`. Starts a tiny local server and opens the browser. Requires Node.js.
 
-**Option 3 — Firefox only**
+**Option 4 — Firefox only**
 Firefox lets you open HTML files directly from disk. Chrome and Edge do not allow multi-file local projects to run this way.
 
 ---
