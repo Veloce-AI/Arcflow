@@ -805,7 +805,7 @@ Arcflow/
 
 ## Acknowledgments
 
-> Inspired by **CodeFlow** — the original idea that codebase visualization should be instant and frictionless.
+> Inspired by **[CodeFlow](https://github.com/braedonsaunders/codeflow)** — the original idea that codebase visualization should be instant and frictionless.
 
 Built on the shoulders of excellent open-source libraries: [React](https://react.dev), [D3.js](https://d3js.org), [Mermaid](https://mermaid.js.org), [Acorn](https://github.com/acornjs/acorn), [web-tree-sitter](https://github.com/tree-sitter/tree-sitter), [JSZip](https://stuk.github.io/jszip/), [jsPDF](https://github.com/parallax/jsPDF).
 
