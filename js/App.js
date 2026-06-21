@@ -500,7 +500,7 @@ function App(){
 
     // Open file preview
     function openFilePreview(path,line){
-        loaderOpenFilePreview(path,line,{repoInfo:repoInfo,data:data,localSourceKind:localSourceKind,localDirHandle:localDirHandle,setFilePreview:setFilePreview,zipArchiveRef:zipArchiveRef});
+        loaderOpenFilePreview(path,line,{repoInfo:repoInfo,data:data,localSourceKind:localSourceKind,localDirHandle:localDirHandle,setFilePreview:setFilePreview,zipArchiveRef:zipArchiveRef,localFilesRef:localFilesRef});
     }
 
     // Scroll to highlighted line after file preview loads

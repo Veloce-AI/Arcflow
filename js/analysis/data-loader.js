@@ -523,7 +523,7 @@ async function loaderReadZipArchive(zipFile,compiledPatterns,ctx){
     }
 
 function loaderOpenFilePreview(path,line,ctx){
-    var repoInfo=ctx.repoInfo,data=ctx.data,localSourceKind=ctx.localSourceKind,localDirHandle=ctx.localDirHandle,setFilePreview=ctx.setFilePreview,zipArchiveRef=ctx.zipArchiveRef;
+    var repoInfo=ctx.repoInfo,data=ctx.data,localSourceKind=ctx.localSourceKind,localDirHandle=ctx.localDirHandle,setFilePreview=ctx.setFilePreview,zipArchiveRef=ctx.zipArchiveRef,localFilesRef=ctx.localFilesRef;
         if(!repoInfo)return;
         var filename=path.split('/').pop();
         setFilePreview({path:path,filename:filename,content:null,line:line||null,loading:true,error:null});
@@ -537,7 +537,7 @@ function loaderOpenFilePreview(path,line,ctx){
         }
         // Fetch from GitHub, local directory, or ZIP archive
         if(localSourceKind==='folder'&&localDirHandle){
-            // Read from a local directory using async traversal
+            // Read from a local directory using File System Access API handle
             (async function(){
                 try{
                     var parts=path.split('/');
@@ -548,6 +548,26 @@ function loaderOpenFilePreview(path,line,ctx){
                     var fileHandle=await currentHandle.getFileHandle(parts[parts.length-1]);
                     var fileObj=await fileHandle.getFile();
                     var content=await fileObj.text();
+                    setFilePreview({path:path,filename:filename,content:content,line:line||null,loading:false,error:null});
+                }catch(e){
+                    setFilePreview({path:path,filename:filename,content:null,line:line||null,loading:false,error:e.message||'Failed to load file'});
+                }
+            })();
+        }else if(localSourceKind==='folder'&&localFilesRef&&localFilesRef.current){
+            // Read from File objects (webkitdirectory fallback — used in VS Code extension webview)
+            (async function(){
+                try{
+                    var fileObjs=localFilesRef.current;
+                    var match=null;
+                    for(var i=0;i<fileObjs.length;i++){
+                        var raw=fileObjs[i].webkitRelativePath||fileObjs[i].name;
+                        // strip the root folder prefix (first segment) to match stored paths
+                        var slashIdx=raw.indexOf('/');
+                        var stripped=slashIdx>=0?raw.slice(slashIdx+1):raw;
+                        if(stripped===path){match=fileObjs[i];break;}
+                    }
+                    if(!match)throw new Error('File not found in loaded folder');
+                    var content=await match.text();
                     setFilePreview({path:path,filename:filename,content:content,line:line||null,loading:false,error:null});
                 }catch(e){
                     setFilePreview({path:path,filename:filename,content:null,line:line||null,loading:false,error:e.message||'Failed to load file'});
