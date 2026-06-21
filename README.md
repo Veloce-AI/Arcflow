@@ -1,8 +1,44 @@
-# Arcflow — Codebase Architecture Intelligence
+<div align="center">
 
-Arcflow turns any codebase into an interactive visual map. Paste a GitHub URL, open a local folder, or drop a ZIP — and within seconds you can see how every file connects, what would break if something changed, where the security risks are, and how healthy the overall structure is. Everything runs in your browser. Nothing is uploaded anywhere.
+<img src="logo.svg" width="160" alt="Arcflow Logo">
 
-> **Fully offline.** All libraries (React, D3, fonts) ship with the app. No internet required to run after first setup.
+<br><br>
+
+<h1>Arcflow</h1>
+
+<h3>VAPT &amp; Security Analysis Platform with Architecture Intelligence</h3>
+
+<p><strong>Scan for vulnerabilities · Map dependencies · Detect secrets · Audit your codebase — all in your browser, zero install.</strong></p>
+
+<br>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-6366f1?style=flat-square)](LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/Veloce-AI/Arcflow?style=flat-square&color=6366f1)](https://github.com/Veloce-AI/Arcflow/stargazers) [![Open Issues](https://img.shields.io/github/issues/Veloce-AI/Arcflow?style=flat-square&color=a78bfa)](https://github.com/Veloce-AI/Arcflow/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-a78bfa?style=flat-square)](https://github.com/Veloce-AI/Arcflow/pulls) [![Works Offline](https://img.shields.io/badge/works-offline-6366f1?style=flat-square)](#whats-bundled-offline) [![Zero Install](https://img.shields.io/badge/zero-install-a78bfa?style=flat-square)](#quick-setup--zero-install) [![VS Code](https://img.shields.io/badge/VS%20Code-Extension-6366f1?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=Veloce-AI.arcflow)![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat-square&logo=react&logoColor=black) ![D3.js](https://img.shields.io/badge/D3.js-7.8-F9A03C?style=flat-square&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES5-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-offline-E34F26?style=flat-square&logo=html5&logoColor=white) ![WebGL](https://img.shields.io/badge/WebGL-3D_graphs-990000?style=flat-square) ![Mermaid](https://img.shields.io/badge/Mermaid-diagrams-FF3670?style=flat-square) ![OWASP](https://img.shields.io/badge/OWASP-Top_10-000000?style=flat-square) ![CycloneDX](https://img.shields.io/badge/CycloneDX-SBOM-00AEEF?style=flat-square) ![SARIF](https://img.shields.io/badge/SARIF-2.1.0-0078D4?style=flat-square&logo=github&logoColor=white)
+
+<br>
+
+<p>Paste a GitHub URL, open a local folder, or drop a ZIP — and within seconds see how every file connects,<br>what would break if something changed, where the secrets and vulnerabilities are, and how healthy the overall structure is.<br>Everything runs in your browser tab. Nothing is ever uploaded.</p>
+
+<br>
+
+<p><em>Developed with ♥ by <strong><a href="https://veloceai.in">VeloceAI.in</a></strong> — open source for the community</em></p>
+
+</div>
+
+---
+
+> **Fully offline.** All libraries (React, D3, fonts) ship with the app. No internet required after first download.
+
+---
+
+## Why Arcflow?
+
+| Security | Architecture | Quality |
+|:---:|:---:|:---:|
+| 🛡 OWASP Top 10 radar | 🗺 10 graph/chart views | 📊 Maintainability Index |
+| 🔑 Secrets & entropy scan | 💥 Blast radius analysis | 🔄 Cyclomatic complexity |
+| 🚨 CVE / OSV dependency audit | 📡 API routes + auth detection | 🕳 Dead code & duplication |
+| 📄 SARIF / SBOM export | 🏗 Auto architecture diagrams | 🔬 Call graph tracing |
+| 🏴‍☠️ Unprotected endpoint detection | 🔗 Circular dependency finder | 🏷 TODO / FIXME tracker |
 
 ---
 
@@ -27,7 +63,7 @@ Arcflow has no server, no build step, no npm, no dependencies to install. Every 
 
 ```
 # Clone via git
-git clone https://github.com/YOUR_USERNAME/arcflow.git
+git clone https://github.com/Veloce-AI/Arcflow.git
 
 # Or click "Code → Download ZIP" on GitHub, then unzip it
 ```
@@ -602,7 +638,6 @@ Before making changes, skim these files to get oriented:
 | `js/analysis/parser-*.js` | Language parsing, security scanning, route detection, etc. |
 | `js/components/right-panel.js` | The largest UI file — all right-panel tabs |
 | `js/renderers/renderer-*.js` | One file per visualization type |
-| `DEVPLAN.md` | Full history of every feature built — read this first to understand what exists |
 
 ### Ground rules for this codebase
 
@@ -618,8 +653,8 @@ Before making changes, skim these files to get oriented:
 
 2. **Clone your fork** locally:
    ```
-   git clone https://github.com/YOUR_USERNAME/arcflow.git
-   cd arcflow
+   git clone https://github.com/YOUR_USERNAME/Arcflow.git
+   cd Arcflow
    ```
 
 3. **Create a branch** for your change:
@@ -765,3 +800,25 @@ Arcflow/
 | jsrsasign | 11.1 | JWT signing for GitHub App auth |
 
 **No build step. No npm install. No Node.js required to run.**
+
+---
+
+## Acknowledgments
+
+> Inspired by **CodeFlow** — the original idea that codebase visualization should be instant and frictionless.
+
+Built on the shoulders of excellent open-source libraries: [React](https://react.dev), [D3.js](https://d3js.org), [Mermaid](https://mermaid.js.org), [Acorn](https://github.com/acornjs/acorn), [web-tree-sitter](https://github.com/tree-sitter/tree-sitter), [JSZip](https://stuk.github.io/jszip/), [jsPDF](https://github.com/parallax/jsPDF).
+
+CVE data powered by [OSV.dev](https://osv.dev) — the open-source vulnerability database.
+
+---
+
+<div align="center">
+
+**Arcflow** is an open-source project by **[VeloceAI.in](https://veloceai.in)**
+
+Built for developers, security engineers, and architects who want clarity without complexity.
+
+*If Arcflow saved you time, give it a ⭐ on [GitHub](https://github.com/Veloce-AI/Arcflow)*
+
+</div>
